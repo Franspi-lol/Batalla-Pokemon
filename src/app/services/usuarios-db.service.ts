@@ -12,10 +12,8 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class UsuariosDbService implements OnInit{
 
-  url: string="http://localhost:4200/usuarios";
+  url: string = "/usuarios";
   listado: usuario[]|undefined=[];
-
-  
 
   constructor(
     private router: Router,
@@ -29,6 +27,7 @@ export class UsuariosDbService implements OnInit{
   }
 
   private id= -1;
+
 
   setearId(id:number){
     this.id= id;
