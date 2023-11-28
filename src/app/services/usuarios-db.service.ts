@@ -12,7 +12,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class UsuariosDbService implements OnInit{
 
-  url: string = "/usuarios";
+  url: string = "http://localhost:4200/usuarios";
   listado: usuario[]|undefined=[];
 
   constructor(
