@@ -18,10 +18,10 @@ export class CampoDeBatallaComponent implements OnInit{
   porcentajeVidaJ2:number;
 
   images = [
-    'url(./../../../../../assets/img/fondoCombate3.png)',
-    'url(./../../../../../assets/img/fondoCombate1.png)',
-    'url(./../../../../../assets/img/fondoCombate2.png)',
-    'url(./../../../../../assets/img/fondoCombate4.png)'
+    'url(./assets/img/fondoCombate3.png)',
+    'url(./assets/img/fondoCombate1.png)',
+    'url(./assets/img/fondoCombate2.png)',
+    'url(./assets/img/fondoCombate4.png)'
     
     
     
@@ -48,11 +48,11 @@ export class CampoDeBatallaComponent implements OnInit{
 
 
   audioCries = [
-    '../../../../assets/BattleCries/cry1.mp3',
-    '../../../../assets/BattleCries/cry2.mp3',
-    '../../../../assets/BattleCries/cry3.mp3',
-    '../../../../assets/BattleCries/cry4.mp3',
-    '../../../../assets/BattleCries/cry5.mp3'
+    './assets/BattleCries/cry1.mp3',
+    './assets/BattleCries/cry2.mp3',
+    './assets/BattleCries/cry3.mp3',
+    './assets/BattleCries/cry4.mp3',
+    './assets/BattleCries/cry5.mp3'
   ]
 
   playSoundPoke()//clickea un pokemon en el combate
