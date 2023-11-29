@@ -27,6 +27,7 @@ export class AppComponent {
 
     this.audioCombate.loop = true;
     this.audioLobby.loop = true;
+    
     this.audioGym.loop = true;
     this.audioVictory.loop = true;
     this.audio.volume = 0.5; 
@@ -34,6 +35,11 @@ export class AppComponent {
     this.audioLobby.volume = 0.5;
     this.audioGym.volume = 0.5;
     this.audioVictory.volume = 0.5;
+    this.audioGym.autoplay = true;
+    this.audioVictory.autoplay = true;
+    this.audioLobby.autoplay = true;
+    this.audioCombate.autoplay = true;
+    
 
     this.audio.addEventListener('canplaythrough', () => {
       this.audio.muted = false;
