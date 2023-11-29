@@ -12,7 +12,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class UsuariosDbService implements OnInit{
 
-  url: string = "https://prueba-backend-pokemon.vercel.app/db/";
+  url: string = "https://github.com/Franspi-lol/demoPOkeBack/blob/master/db.json";
   
   listado: usuario[]|undefined=[];
 
