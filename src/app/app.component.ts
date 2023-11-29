@@ -10,7 +10,7 @@ import { AudioService } from './services/audio-service.service';
 })
 export class AppComponent {
   title = 'Poket-Fighter';
-  audio = new Audio('./assets/MenuTheme.mp3');
+  audio = new Audio('./assets/menuTheme.mp3');
   audioCombate = new Audio('./assets/battleTheme.mp3');
   audioLobby = new Audio('./assets/pokemonCenter.mp3');
   audioGym = new Audio('./assets/gymTheme.mp3');

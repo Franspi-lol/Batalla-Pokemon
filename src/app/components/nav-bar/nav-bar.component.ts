@@ -31,5 +31,9 @@ export class NavBarComponent implements OnInit{
     this.router.navigate(["pokedex"]);      
   }
   
+  playAudio(){
+    let audioLobby = new Audio('./assets/pokemonCenter.mp3');
+    audioLobby.play();
+  }
 
 }
