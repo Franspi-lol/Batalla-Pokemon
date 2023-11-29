@@ -45,18 +45,18 @@ const appRoutes:Routes=[
   {path:'home',component:HomeInicialComponent},
   {path:'login',component:LoginFormComponent},
   {path:'registrarse',component:RegistrarseComponent },
-  {path:'nav-bar',component:NavBarComponent/* ,canMatch:[authGuard] */},
+  {path:'nav-bar',component:NavBarComponent,canMatch:[authGuard]},
 
-  {path:'page-menu',component:PageMenuComponent/* ,canMatch:[authGuard] */,
+  {path:'page-menu',component:PageMenuComponent,canMatch:[authGuard],
     children:[
-      {path:'pokedex',component:PokedexComponent/* ,canMatch:[authGuard] */},
-      {path:'ingresar-jugadores',component:IngresarJugadoresComponent/* ,canMatch:[authGuard] */},
-      {path:'historial',component:HistorialComponent/* ,canMatch:[authGuard] */}
+      {path:'pokedex',component:PokedexComponent,canMatch:[authGuard]},
+      {path:'ingresar-jugadores',component:IngresarJugadoresComponent,canMatch:[authGuard]},
+      {path:'historial',component:HistorialComponent,canMatch:[authGuard]}
     ]
   },
-  {path:"eleccion",component:EleccionComponent/* ,canMatch:[authGuard] */},
-  {path:'pelea',component:PeleaComponent/* ,canMatch:[authGuard] */},
-  {path:"victoria",component:VictoriaComponent/* ,canMatch:[authGuard] */},
+  {path:"eleccion",component:EleccionComponent,canMatch:[authGuard]},
+  {path:'pelea',component:PeleaComponent,canMatch:[authGuard]},
+  {path:"victoria",component:VictoriaComponent,canMatch:[authGuard]},
   {path:'**', redirectTo:'home', pathMatch:'full'},
   //{path:"editar-usuario",component:EditarUsuarioComponent}  
 ];

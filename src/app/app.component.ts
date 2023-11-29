@@ -24,7 +24,7 @@ export class AppComponent {
     this.audio.addEventListener('canplaythrough', () => {
       console.log('Audio has finished loading and can be played.');
       this.audio.muted = false; // Unmute the audio
-      this.audio.play(); // Start playing
+      /* this.audio.play(); // Start playing */
     });
   
     
