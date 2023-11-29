@@ -39,54 +39,41 @@ export class AppComponent {
     this.audioLobby.volume = 0.5;
     this.audioGym.volume = 0.5;
     this.audioVictory.volume = 0.5;
-    this.audioGym.autoplay = true;
+    /* this.audioGym.autoplay = true;
     this.audioVictory.autoplay = true;
     this.audioLobby.autoplay = true;
-    this.audioCombate.autoplay = true;
+    this.audioCombate.autoplay = true; */
     
 
     this.audio.addEventListener('canplaythrough', () => {
       this.audio.muted = false;
       this.router.events.subscribe((event) => {
         if (event instanceof NavigationEnd) {
-          if (
-            event.url === '/' ||
-            event.url === '/home' ||
-            event.url === '' ||
-            event.url === '/login' ||
-            event.url === '/registrarse'
-          ) {
-            setTimeout(() => {
-              this.audio.play();
-              console.log('music playing');
-            }, 50);
-          } else {
-            this.audio.pause();
-            this.audio.currentTime = 0;
-          }
-          if (event.url === '/pelea') {
+          // Pause all audio files
+          this.audio.pause();
+          this.audioCombate.pause();
+          this.audioLobby.pause();
+          this.audioGym.pause();
+          this.audioVictory.pause();
+      
+          // Reset the current time for all audio files
+          this.audio.currentTime = 0;
+          this.audioCombate.currentTime = 0;
+          this.audioLobby.currentTime = 0;
+          this.audioGym.currentTime = 0;
+          this.audioVictory.currentTime = 0;
+      
+          // Play the appropriate audio file based on the current route
+          if (event.url === '/home' || event.url === '/login' || event.url === '/registrarse') {
+            this.audio.play();
+          } else if (event.url === '/pelea') {
             this.audioCombate.play();
-          } else {
-            this.audioCombate.pause();
-            this.audioCombate.currentTime = 0;
-          }
-          if (event.url.startsWith('/page-menu')) {
+          } else if (event.url.startsWith('/page-menu')) {
             this.audioLobby.play();
-          } else {
-            this.audioLobby.pause();
-            this.audioLobby.currentTime = 0;
-          }
-          if (event.url === '/eleccion') {
+          } else if (event.url === '/gym') {
             this.audioGym.play();
-          } else {
-            this.audioGym.pause();
-            this.audioGym.currentTime = 0;
-          }
-          if (event.url === '/victoria') {
+          } else if (event.url === '/victory') {
             this.audioVictory.play();
-          } else {
-            this.audioVictory.pause();
-            this.audioVictory.currentTime = 0;
           }
         }
       });

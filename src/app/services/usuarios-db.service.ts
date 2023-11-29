@@ -13,7 +13,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 export class UsuariosDbService implements OnInit{
 
 
-  url: string = "https://cors-anywhere.herokuapp.com/https://my-json-server.typicode.com/franspi-lol/demoPOkeBack";
+  url: string = "https://prueba-backend-pokemon.vercel.app/usuarios";
 
 
   
