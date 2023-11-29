@@ -12,7 +12,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class UsuariosDbService implements OnInit{
 
-  url: string = "https://github.com/Franspi-lol/demoPOkeBack/blob/master/db.json";
+  url: string = "https://cors-anywhere.herokuapp.com/https://my-json-server.typicode.com/franspi-lol/demoPOkeBack";
   
   listado: usuario[]|undefined=[];
 
