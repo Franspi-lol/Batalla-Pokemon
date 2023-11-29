@@ -12,7 +12,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class UsuariosDbService implements OnInit{
 
-  url: string = "http://localhost:4200/usuarios";
+  url: string = "https://prueba-backend-pokemon.vercel.app/";
   listado: usuario[]|undefined=[];
 
   constructor(
