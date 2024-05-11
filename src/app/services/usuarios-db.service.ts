@@ -11,7 +11,7 @@ import { partida } from 'src/app/interfaces/interface-partida';
 })
 export class UsuariosDbService implements OnInit{
 
-  url: string="http://localhost:4200/usuarios";
+  url: string="https://prueba-backend-pokemon.vercel.app/usuarios"; //http://localhost:4200/usuarios
   listado: usuario[]|undefined=[];
 
   
